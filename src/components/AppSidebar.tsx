@@ -36,12 +36,12 @@ export default function AppSidebar() {
     >
       {/* Logo */}
       <div className="flex items-center gap-2 px-4 py-5 border-b border-border">
-        <div className="h-8 w-8 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0">
-          <BarChart3 className="h-4 w-4 text-primary-foreground" />
+        <div className="h-8 w-8 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0 bg-sidebar-accent">
+          <img src="/logo.png" alt="Loop Logo" className="h-full w-full object-cover" />
         </div>
         {!collapsed && (
           <div className="overflow-hidden">
-            <h1 className="text-sm font-bold text-foreground tracking-tight">AutoSRE</h1>
+            <h1 className="text-sm font-bold text-foreground tracking-tight">Loop</h1>
             <p className="text-[10px] text-muted-foreground font-mono">AUTONOMOUS OPS</p>
           </div>
         )}

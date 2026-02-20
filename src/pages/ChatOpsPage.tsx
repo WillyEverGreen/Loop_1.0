@@ -83,7 +83,7 @@ export default function ChatOpsPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-foreground">ChatOps</h1>
-          <p className="text-sm text-muted-foreground">Ask AutoSRE anything about your infrastructure</p>
+          <p className="text-sm text-muted-foreground">Ask Loop anything about your infrastructure</p>
         </div>
       </div>
 
@@ -155,7 +155,7 @@ export default function ChatOpsPage() {
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask AutoSRE..."
+              placeholder="Ask Loop..."
               className="flex-1 bg-secondary rounded-md px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:ring-1 focus:ring-primary"
             />
             <button type="submit" disabled={!input.trim()} className="p-2 rounded-md bg-primary text-primary-foreground disabled:opacity-30 transition-opacity hover:opacity-90">

@@ -1,4 +1,4 @@
-// Mock data for AutoSRE platform
+// Mock data for Loop platform
 
 export interface Service {
   id: string;
@@ -127,11 +127,11 @@ export const deployments: Deployment[] = [
 ];
 
 export const auditEntries: AuditEntry[] = [
-  { id: "aud-1", action: "Auto-remediation: Service restart", actor: "AutoSRE AI", target: "redis-cache", timestamp: "2 min ago", hash: "0xa3f2...8b1c", verified: true },
+  { id: "aud-1", action: "Auto-remediation: Service restart", actor: "Loop AI", target: "redis-cache", timestamp: "2 min ago", hash: "0xa3f2...8b1c", verified: true },
   { id: "aud-2", action: "Deployment initiated", actor: "CI/CD Pipeline", target: "payment-service v2.14.3", timestamp: "10 min ago", hash: "0xb7d1...4e2a", verified: true },
-  { id: "aud-3", action: "Auto-scale up", actor: "AutoSRE AI", target: "notification-service (3→5 pods)", timestamp: "15 min ago", hash: "0xc9e4...7f3b", verified: true },
+  { id: "aud-3", action: "Auto-scale up", actor: "Loop AI", target: "notification-service (3→5 pods)", timestamp: "15 min ago", hash: "0xc9e4...7f3b", verified: true },
   { id: "aud-4", action: "Config change", actor: "admin@company.com", target: "api-gateway rate limits", timestamp: "1h ago", hash: "0xd2f8...1a5c", verified: true },
-  { id: "aud-5", action: "Rollback executed", actor: "AutoSRE AI", target: "search-service v1.12.0 → v1.11.8", timestamp: "4h ago", hash: "0xe5a3...9d4e", verified: true },
+  { id: "aud-5", action: "Rollback executed", actor: "Loop AI", target: "search-service v1.12.0 → v1.11.8", timestamp: "4h ago", hash: "0xe5a3...9d4e", verified: true },
 ];
 
 export const chaosExperiments: ChaosExperiment[] = [
