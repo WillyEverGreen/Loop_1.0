@@ -331,7 +331,7 @@ export const SimulationProvider = ({ children }: { children: ReactNode }) => {
     eventsPerSec: "4.2M",
     falsePositiveRate: 3.8,
     totalCostSavings: 9000,
-    uptime: services.reduce((acc, s) => acc + s.uptime, 0) / services.length,
+    uptime: Number((services.reduce((acc, s) => acc + s.uptime, 0) / services.length).toFixed(2)),
   };
 
   return (
