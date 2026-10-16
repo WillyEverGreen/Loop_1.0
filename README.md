@@ -6,6 +6,22 @@
 
 Loop is a state-of-the-art **Autonomous Site Reliability Engineering (SRE)** platform designed to predict, prevent, and remediate infrastructure failures without human intervention. By leveraging advanced anomaly detection and AI-driven automation, Loop reduces MTTR from hours to minutes, ensuring high availability for large-scale distributed systems.
 
+**Live demo: https://loop-1-0.vercel.app**
+
+## Screenshots
+
+**System overview dashboard**
+
+![System overview dashboard](docs/screenshots/loop-1.0-home.png)
+
+**Incident timeline and logs**
+
+![Incident timeline and logs](docs/screenshots/loop-1.0-2.png)
+
+**Mobile view**
+
+![Mobile view](docs/screenshots/loop-1.0-mobile.png)
+
 ## 🚀 Vision
 
 Production systems face 200+ incidents monthly with significant business impact. Loop transforms traditional monitoring into an autonomous operation that predicts failures before they affect users, automatically implements corrective actions, and provides deep root cause insights.
