@@ -1,26 +1,18 @@
-<p align="center">
-  <img src="./public/logo.png" width="120" alt="Loop Logo" />
-</p>
+<div align="center">
 
-# Loop: Autonomous SRE & DevOps Platform
+<img src="public/logo.png" width="110" alt="Loop logo" />
 
-Loop is a state-of-the-art **Autonomous Site Reliability Engineering (SRE)** platform designed to predict, prevent, and remediate infrastructure failures without human intervention. By leveraging advanced anomaly detection and AI-driven automation, Loop reduces MTTR from hours to minutes, ensuring high availability for large-scale distributed systems.
+# Loop
 
-**Live demo: https://loop-1-0.vercel.app**
+**Autonomous SRE and DevOps platform for cloud infrastructure monitoring and incident orchestration.**
 
-## Screenshots
+<a href="https://loop-1-0.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-Open_the_app-2ea44f?style=for-the-badge" alt="Live demo" /></a>
 
-**System overview dashboard**
+<br/>
 
-![System overview dashboard](docs/screenshots/loop-1.0-home.png)
+<img src="docs/screenshot.png" width="860" alt="Loop screenshot" />
 
-**Incident timeline and logs**
-
-![Incident timeline and logs](docs/screenshots/loop-1.0-2.png)
-
-**Mobile view**
-
-![Mobile view](docs/screenshots/loop-1.0-mobile.png)
+</div>
 
 ## 🚀 Vision
 
