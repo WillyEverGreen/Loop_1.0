@@ -1,4 +1,5 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
 import { useSimulation } from "@/context/SimulationContext";
 import { Database } from "lucide-react";
 import { motion } from "framer-motion";
@@ -8,15 +9,7 @@ export default function DatabasePage() {
   const { databaseQueries: queries } = useSimulation();
   return (
     <DashboardLayout>
-      <div className="flex items-center gap-3 mb-6">
-        <div className="h-10 w-10 rounded-lg gradient-primary flex items-center justify-center">
-          <Database className="h-5 w-5 text-primary-foreground" />
-        </div>
-        <div>
-          <h1 className="text-2xl font-bold text-foreground">Database Auto-Optimizer</h1>
-          <p className="text-sm text-muted-foreground">AI-driven query analysis and index recommendations</p>
-        </div>
-      </div>
+      <PageHeader icon={Database} title="DB Optimizer" subtitle="AI-driven query analysis and index recommendations" kicker="Data" tone="accent" />
 
       <div className="space-y-3">
         {queries.map((q, i) => (

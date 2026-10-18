@@ -1,4 +1,5 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
 import { useState, useRef, useEffect } from "react";
 import { MessageSquare, Send, Bot, User } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -77,17 +78,9 @@ export default function ChatOpsPage() {
   };
    return (
     <DashboardLayout>
-      <div className="flex items-center gap-3 mb-4">
-        <div className="h-10 w-10 rounded-lg gradient-primary flex items-center justify-center">
-          <MessageSquare className="h-5 w-5 text-primary-foreground" />
-        </div>
-        <div>
-          <h1 className="text-2xl font-bold text-foreground">ChatOps</h1>
-          <p className="text-sm text-muted-foreground">Ask Loop anything about your infrastructure</p>
-        </div>
-      </div>
+      <PageHeader icon={MessageSquare} title="ChatOps" subtitle="Ask Loop anything about your infrastructure" kicker="Assistant" tone="primary" />
 
-      <div className="rounded-lg border border-border bg-card flex flex-col" style={{ height: "calc(100vh - 180px)" }}>
+      <div className="rounded-lg border border-border bg-card flex flex-col" style={{ height: "calc(100vh - 250px)" }}>
         {/* Messages */}
         <div className="flex-1 overflow-y-auto scrollbar-thin p-4 space-y-4">
           {messages.length === 0 && (

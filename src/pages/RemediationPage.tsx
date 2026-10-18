@@ -1,4 +1,5 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
 import { useSimulation } from "@/context/SimulationContext";
 import { Bot, CheckCircle, RotateCcw, ArrowUpCircle, RefreshCw, GitBranch } from "lucide-react";
 import { motion } from "framer-motion";
@@ -15,15 +16,7 @@ export default function RemediationPage() {
   const { remediations } = useSimulation();
   return (
     <DashboardLayout>
-      <div className="flex items-center gap-3 mb-6">
-        <div className="h-10 w-10 rounded-lg gradient-primary flex items-center justify-center">
-          <Bot className="h-5 w-5 text-primary-foreground" />
-        </div>
-        <div>
-          <h1 className="text-2xl font-bold text-foreground">Autonomous Remediation</h1>
-          <p className="text-sm text-muted-foreground">AI-driven auto-fix engine • 83% success rate • All actions reversible</p>
-        </div>
-      </div>
+      <PageHeader icon={Bot} title="Autonomous Remediation" subtitle="AI-driven auto-fix engine • 83% success rate • All actions reversible" kicker="Act" tone="primary" />
 
       <div className="space-y-3">
         {remediations.map((r, i) => {

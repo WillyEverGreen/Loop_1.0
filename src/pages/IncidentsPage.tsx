@@ -1,4 +1,5 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
 import IncidentTimeline from "@/components/IncidentTimeline";
 import { useSimulation } from "@/context/SimulationContext";
 import StatusCard from "@/components/StatusCard";
@@ -13,7 +14,7 @@ export default function IncidentsPage() {
 
   return (
     <DashboardLayout>
-      <h1 className="text-2xl font-bold text-foreground mb-6">Incidents</h1>
+      <PageHeader icon={AlertTriangle} title="Incidents" subtitle="Active, predicted and resolved incidents across your services" kicker="Monitor" tone="danger" />
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
         <StatusCard title="Active" value={active.length} icon={AlertTriangle} variant="danger" />
         <StatusCard title="Predicted" value={predicted.length} icon={Zap} variant="warning" />

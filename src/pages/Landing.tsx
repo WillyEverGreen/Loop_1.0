@@ -38,7 +38,7 @@ export default function Landing() {
       <div className="shell">
       
       <header className="nav">
-        <a className="brand" href="#top"><span className="mark"><i></i><i></i></span>Loop</a>
+        <a className="brand" href="#top"><img className="mark" src="/logo.svg" alt="" />Loop</a>
         <nav className="pill" aria-label="Main">
           <a className="is-on" href="#top">Home</a>
           <a href="#features">Features</a>
@@ -71,7 +71,7 @@ export default function Landing() {
       
         <div className="dash" aria-label="Loop dashboard preview">
           <aside className="dash__side">
-            <div className="dash__logo"><span className="mark"><i></i><i></i></span>Loop</div>
+            <div className="dash__logo"><img className="mark" src="/logo.svg" alt="" />Loop</div>
             <div className="dash__search">Search anything…</div>
             <small>MENU</small>
             <a className="on">Overview</a><a>Incidents</a><a>Predictions</a><a>Remediation</a><a>Deployments</a>
@@ -170,7 +170,7 @@ export default function Landing() {
         <Link className="btn btn--dark" to="/overview">Try the live demo <span>→</span></Link>
       </section>
       
-      <footer className="foot"><a className="brand" href="#top"><span className="mark"><i></i><i></i></span>Loop</a><span>© 2026 Loop. Autonomous ops.</span></footer>
+      <footer className="foot"><a className="brand" href="#top"><img className="mark" src="/logo.svg" alt="" />Loop</a><span>© 2026 Loop. Autonomous ops.</span></footer>
       </div>
     </div>
   );

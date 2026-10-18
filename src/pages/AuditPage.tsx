@@ -1,10 +1,12 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
+import { Shield } from "lucide-react";
 import AuditLog from "@/components/AuditLog";
 
 export default function AuditPage() {
   return (
     <DashboardLayout>
-      <h1 className="text-2xl font-bold text-foreground mb-6">Blockchain Audit Log</h1>
+      <PageHeader icon={Shield} title="Audit Log" subtitle="Blockchain-verified record of every action Loop takes" kicker="Governance" tone="accent" />
       <AuditLog />
     </DashboardLayout>
   );

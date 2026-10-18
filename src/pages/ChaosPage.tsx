@@ -1,4 +1,5 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
 import { useSimulation } from "@/context/SimulationContext";
 import { FlaskConical, CheckCircle, Loader2, Clock } from "lucide-react";
 import { motion } from "framer-motion";
@@ -10,15 +11,7 @@ export default function ChaosPage() {
   const { chaosExperiments } = useSimulation();
   return (
     <DashboardLayout>
-      <div className="flex items-center gap-3 mb-6">
-        <div className="h-10 w-10 rounded-lg gradient-warning flex items-center justify-center">
-          <FlaskConical className="h-5 w-5 text-warning-foreground" />
-        </div>
-        <div>
-          <h1 className="text-2xl font-bold text-foreground">Chaos Engineering</h1>
-          <p className="text-sm text-muted-foreground">Continuous resilience testing • Automated failure injection</p>
-        </div>
-      </div>
+      <PageHeader icon={FlaskConical} title="Chaos Engineering" subtitle="Continuous resilience testing • Automated failure injection" kicker="Resilience" tone="warning" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {chaosExperiments.map((exp, i) => {

@@ -1,4 +1,5 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
 import StatusCard from "@/components/StatusCard";
 import { useSimulation } from "@/context/SimulationContext";
 import { Cloud, TrendingDown, DollarSign, Zap } from "lucide-react";
@@ -19,7 +20,7 @@ export default function CostPage() {
 
   return (
     <DashboardLayout>
-      <h1 className="text-2xl font-bold text-foreground mb-6">FinOps — Cloud Cost Optimization</h1>
+      <PageHeader icon={Cloud} title="FinOps" subtitle="Cloud cost optimization and idle resource savings" kicker="Costs" tone="success" />
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
         <StatusCard title="Monthly Spend" value={`$${(totalCurrent / 1000).toFixed(1)}K`} icon={DollarSign} variant="default" />

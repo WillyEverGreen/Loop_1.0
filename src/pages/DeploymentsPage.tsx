@@ -1,10 +1,12 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
+import { GitBranch } from "lucide-react";
 import DeploymentTracker from "@/components/DeploymentTracker";
 
 export default function DeploymentsPage() {
   return (
     <DashboardLayout>
-      <h1 className="text-2xl font-bold text-foreground mb-6">Deployment Pipeline</h1>
+      <PageHeader icon={GitBranch} title="Deployments" subtitle="Canary, rolling and rolled-back releases across services" kicker="Delivery" tone="primary" />
       <DeploymentTracker />
     </DashboardLayout>
   );

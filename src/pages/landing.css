@@ -207,3 +207,6 @@
   .landing .steps { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .landing .tag, .landing .bars i { animation: none; } .landing .rv { opacity: 1; transform: none; }  }
+
+.landing img.mark { width: 28px; height: 28px; display: inline-block; }
+.landing .dash__logo img.mark { width: 20px; height: 20px; transform: none; margin: 0; }

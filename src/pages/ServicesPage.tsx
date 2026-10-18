@@ -1,4 +1,6 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
+import { Server } from "lucide-react";
 import ServiceMap from "@/components/ServiceMap";
 import { useSimulation } from "@/context/SimulationContext";
 import { cn } from "@/lib/utils";
@@ -10,7 +12,7 @@ export default function ServicesPage() {
 
   return (
     <DashboardLayout>
-      <h1 className="text-2xl font-bold text-foreground mb-6">Services</h1>
+      <PageHeader icon={Server} title="Services" subtitle="Live health and latency for every service" kicker="Monitor" tone="accent" />
       <ServiceMap services={services} />
 
       <div className="mt-6 rounded-lg border border-border bg-card overflow-hidden">

@@ -1,14 +1,15 @@
 import { NavLink, useLocation } from "react-router-dom";
 import {
   Activity, AlertTriangle, BarChart3, Bot, Cloud, Database,
-  FlaskConical, GitBranch, Home, MessageSquare, Server, Shield,
+  FlaskConical, GitBranch, ScrollText, Home, MessageSquare, Server, Shield,
   Zap, ChevronLeft, ChevronRight
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { LogoMark } from "./Logo";
 
 const navItems = [
-  { to: "/logs", icon: FlaskConical, label: "System Logs" },
+  { to: "/logs", icon: ScrollText, label: "System Logs" },
   { to: "/overview", icon: Home, label: "Overview" },
   { to: "/incidents", icon: AlertTriangle, label: "Incidents" },
   { to: "/services", icon: Server, label: "Services" },
@@ -35,17 +36,15 @@ export default function AppSidebar() {
       )}
     >
       {/* Logo */}
-      <div className="flex items-center gap-2 px-4 py-5 border-b border-border">
-        <div className="h-8 w-8 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0 bg-sidebar-accent">
-          <img src="/logo.png" alt="Loop Logo" className="h-full w-full object-cover" />
-        </div>
+      <NavLink to="/" className="flex items-center gap-2.5 px-4 py-5 border-b border-border" aria-label="Loop home">
+        <LogoMark className="h-8 w-8 flex-shrink-0" />
         {!collapsed && (
-          <div className="overflow-hidden">
-            <NavLink to="/"><h1 className="text-sm font-bold text-foreground tracking-tight">Loop</h1></NavLink>
-            <p className="text-[10px] text-muted-foreground font-mono">AUTONOMOUS OPS</p>
+          <div className="overflow-hidden leading-none">
+            <h1 className="text-base font-bold text-foreground tracking-tight">Loop</h1>
+            <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">Autonomous ops</p>
           </div>
         )}
-      </div>
+      </NavLink>
 
       {/* Nav */}
       <nav className="flex-1 overflow-y-auto scrollbar-thin py-2 px-2 space-y-0.5">

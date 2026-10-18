@@ -1,4 +1,5 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
 import { useSimulation } from "@/context/SimulationContext";
 import { Activity } from "lucide-react";
 import { motion } from "framer-motion";
@@ -16,15 +17,7 @@ export default function RCAPage() {
   const { rcaData } = useSimulation();
   return (
     <DashboardLayout>
-      <div className="flex items-center gap-3 mb-6">
-        <div className="h-10 w-10 rounded-lg gradient-danger flex items-center justify-center">
-          <Activity className="h-5 w-5 text-destructive-foreground" />
-        </div>
-        <div>
-          <h1 className="text-2xl font-bold text-foreground">Root Cause Analysis</h1>
-          <p className="text-sm text-muted-foreground">AI-correlated logs, metrics, and traces</p>
-        </div>
-      </div>
+      <PageHeader icon={Activity} title="Root Cause Analysis" subtitle="AI-correlated logs, metrics, and traces" kicker="Diagnose" tone="danger" />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Timeline */}

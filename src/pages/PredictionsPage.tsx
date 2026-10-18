@@ -1,4 +1,5 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
 import { useSimulation } from "@/context/SimulationContext";
 import { cn } from "@/lib/utils";
 import { Zap, TrendingUp } from "lucide-react";
@@ -10,8 +11,7 @@ export default function PredictionsPage() {
 
   return (
     <DashboardLayout>
-      <h1 className="text-2xl font-bold text-foreground mb-2">AI Failure Predictions</h1>
-      <p className="text-sm text-muted-foreground mb-6">ML-powered predictions across metrics, logs, and traces. 85%+ accuracy, {"<"}5% false positives.</p>
+      <PageHeader icon={Zap} title="AI Failure Predictions" subtitle="ML-powered predictions across metrics, logs, and traces. 85%+ accuracy, under 5% false positives" kicker="Foresight" tone="warning" />
 
       <div className="space-y-3">
         {atRisk.map((svc, i) => (

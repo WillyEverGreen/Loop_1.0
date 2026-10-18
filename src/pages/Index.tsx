@@ -1,4 +1,5 @@
 import DashboardLayout from "@/components/DashboardLayout";
+import PageHeader from "@/components/PageHeader";
 import StatusCard from "@/components/StatusCard";
 import MetricsChart from "@/components/MetricsChart";
 import IncidentTimeline from "@/components/IncidentTimeline";
@@ -7,7 +8,7 @@ import DeploymentTracker from "@/components/DeploymentTracker";
 import AuditLog from "@/components/AuditLog";
 import { useSimulation } from "@/context/SimulationContext";
 import {
-  Activity, AlertTriangle, Bot, Clock, Server, Shield, TrendingDown, Zap
+  Activity, AlertTriangle, Bot, Clock, Home, Server, Shield, TrendingDown, Zap
 } from "lucide-react";
 import { motion } from "framer-motion";
 import DetailedLogList from "@/components/DetailedLogList";
@@ -20,21 +21,17 @@ export default function Index() {
 
   return (
     <DashboardLayout>
-      {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h1 className="text-2xl font-bold text-foreground tracking-tight">System Overview</h1>
-          <p className="text-sm text-muted-foreground mt-0.5 font-mono">
-            Last updated: <span className="text-primary">2s ago</span> • Processing {systemStats.eventsPerSec} events/sec
-          </p>
+      <PageHeader
+        icon={Home}
+        title="System Overview"
+        kicker="Dashboard"
+        subtitle={<>Last updated <span className="font-medium text-primary">2s ago</span> • Processing {systemStats.eventsPerSec} events/sec</>}
+      >
+        <div className="flex items-center gap-1.5 rounded-full border border-success/30 bg-success/10 px-3 py-1.5">
+          <span className="h-2 w-2 rounded-full bg-success animate-pulse-glow" />
+          <span className="text-xs font-semibold uppercase tracking-wider text-success">Demo mode</span>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-success/10 border border-success/20">
-            <span className="h-2 w-2 rounded-full bg-success animate-pulse-glow" />
-            <span className="text-xs font-mono text-success">DEMO MODE</span>
-          </div>
-        </div>
-      </div>
+      </PageHeader>
 
       {/* KPI Cards */}
       <motion.div
