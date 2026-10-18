@@ -65,14 +65,14 @@ export default function Index() {
 
       {/* Bottom Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <div className="lg:col-span-1">
-          <IncidentTimeline incidents={incidents} />
+        <div className="lg:col-span-1 min-w-0">
+          <IncidentTimeline incidents={incidents} limit={4} viewAll={{ to: "/incidents", label: "View all incidents" }} />
         </div>
-        <div className="lg:col-span-1">
-          <DeploymentTracker />
+        <div className="lg:col-span-1 min-w-0">
+          <DeploymentTracker limit={4} viewAll={{ to: "/deployments", label: "View all deployments" }} />
         </div>
-        <div className="lg:col-span-1">
-          <AuditLog />
+        <div className="lg:col-span-1 min-w-0">
+          <AuditLog limit={4} viewAll={{ to: "/audit", label: "View full audit log" }} />
         </div>
       </div>
 
