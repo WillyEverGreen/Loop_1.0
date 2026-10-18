@@ -1,18 +1,32 @@
 <div align="center">
 
-<img src="public/logo.png" width="110" alt="Loop logo" />
+<img src="public/logo.svg" width="96" alt="Loop logo" />
 
 # Loop
 
 **Autonomous SRE and DevOps platform for cloud infrastructure monitoring and incident orchestration.**
 
-<a href="https://loop-1-0.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-Open_the_app-2ea44f?style=for-the-badge" alt="Live demo" /></a>
+<a href="https://loopsre.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-loopsre.vercel.app-e5546f?style=for-the-badge" alt="Live demo" /></a>
+<a href="https://loopsre.vercel.app/overview"><img src="https://img.shields.io/badge/Open-Dashboard-4c7deb?style=for-the-badge" alt="Open the dashboard" /></a>
 
 <br/>
 
-<img src="docs/screenshot.png" width="860" alt="Loop screenshot" />
+<img src="docs/landing.png" width="860" alt="Loop landing page" />
 
 </div>
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td><img src="docs/dashboard.png" alt="System overview dashboard" /></td>
+    <td><img src="docs/predictions.png" alt="AI failure predictions" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>System overview</sub></td>
+    <td align="center"><sub>AI failure predictions</sub></td>
+  </tr>
+</table>
 
 ## 🚀 Vision
 
@@ -61,8 +75,8 @@ Production systems face 200+ incidents monthly with significant business impact.
 
 1.  **Clone the repository**
     ```sh
-    git clone https://github.com/your-repo/loop.git
-    cd loop
+    git clone https://github.com/WillyEverGreen/Loop_1.0.git
+    cd Loop_1.0
     ```
 
 2.  **Install dependencies**
@@ -74,6 +88,8 @@ Production systems face 200+ incidents monthly with significant business impact.
     ```sh
     npm run dev
     ```
+
+    The landing page is served at `/` and the dashboard at `/overview`.
 
 ## 📊 Performance Targets
 
