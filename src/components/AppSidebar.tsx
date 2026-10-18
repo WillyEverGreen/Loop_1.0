@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { to: "/logs", icon: FlaskConical, label: "System Logs" },
-  { to: "/", icon: Home, label: "Overview" },
+  { to: "/overview", icon: Home, label: "Overview" },
   { to: "/incidents", icon: AlertTriangle, label: "Incidents" },
   { to: "/services", icon: Server, label: "Services" },
   { to: "/predictions", icon: Zap, label: "Predictions" },
@@ -41,7 +41,7 @@ export default function AppSidebar() {
         </div>
         {!collapsed && (
           <div className="overflow-hidden">
-            <h1 className="text-sm font-bold text-foreground tracking-tight">Loop</h1>
+            <NavLink to="/"><h1 className="text-sm font-bold text-foreground tracking-tight">Loop</h1></NavLink>
             <p className="text-[10px] text-muted-foreground font-mono">AUTONOMOUS OPS</p>
           </div>
         )}

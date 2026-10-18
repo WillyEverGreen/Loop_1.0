@@ -16,7 +16,7 @@ export default function MetricsChart({ data, title, color, unit = "", height = 1
       <ResponsiveContainer width="100%" height={height}>
         <AreaChart data={data}>
           <defs>
-            <linearGradient id={`grad-${title}`} x1="0" y1="0" x2="0" y2="1">
+            <linearGradient id={`grad-${title.replace(/\W+/g, "-")}`} x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor={color} stopOpacity={0.3} />
               <stop offset="100%" stopColor={color} stopOpacity={0} />
             </linearGradient>
@@ -25,10 +25,10 @@ export default function MetricsChart({ data, title, color, unit = "", height = 1
           <YAxis hide domain={["dataMin - 5", "dataMax + 5"]} />
           <Tooltip
             contentStyle={{
-              background: "hsl(220 18% 10%)",
-              border: "1px solid hsl(220 14% 16%)",
+              background: "hsl(0 0% 100%)",
+              border: "1px solid hsl(232 30% 90%)",
               borderRadius: "6px",
-              color: "hsl(210 20% 92%)",
+              color: "hsl(240 15% 7%)",
               fontSize: "12px",
               fontFamily: "JetBrains Mono",
             }}
@@ -39,7 +39,7 @@ export default function MetricsChart({ data, title, color, unit = "", height = 1
             dataKey="value"
             stroke={color}
             strokeWidth={1.5}
-            fill={`url(#grad-${title})`}
+            fill={`url(#grad-${title.replace(/\W+/g, "-")})`}
             dot={false}
           />
         </AreaChart>

@@ -54,11 +54,11 @@ export default function Index() {
 
       {/* Metrics Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 mb-6">
-        <MetricsChart data={cpuMetrics} title="CPU Usage" color="hsl(185, 80%, 50%)" unit="%" />
-        <MetricsChart data={memoryMetrics} title="Memory" color="hsl(210, 100%, 60%)" unit="%" />
-        <MetricsChart data={latencyMetrics} title="P99 Latency" color="hsl(38, 95%, 55%)" unit="ms" />
-        <MetricsChart data={errorRateMetrics} title="Error Rate" color="hsl(0, 85%, 55%)" unit="%" />
-        <MetricsChart data={throughputMetrics} title="Throughput" color="hsl(145, 70%, 45%)" unit=" rps" />
+        <MetricsChart data={cpuMetrics} title="CPU Usage" color="hsl(220, 83%, 65%)" unit="%" />
+        <MetricsChart data={memoryMetrics} title="Memory" color="hsl(260, 70%, 70%)" unit="%" />
+        <MetricsChart data={latencyMetrics} title="P99 Latency" color="hsl(38, 85%, 52%)" unit="ms" />
+        <MetricsChart data={errorRateMetrics} title="Error Rate" color="hsl(347, 80%, 67%)" unit="%" />
+        <MetricsChart data={throughputMetrics} title="Throughput" color="hsl(160, 56%, 42%)" unit=" rps" />
       </div>
 
       {/* Service Map */}

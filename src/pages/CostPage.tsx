@@ -33,14 +33,14 @@ export default function CostPage() {
           <h3 className="text-sm font-semibold text-foreground mb-4">Cost Comparison by Service</h3>
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={chartData} layout="vertical">
-              <XAxis type="number" tick={{ fill: "hsl(215 12% 50%)", fontSize: 10, fontFamily: "JetBrains Mono" }} />
-              <YAxis type="category" dataKey="name" width={100} tick={{ fill: "hsl(210 20% 92%)", fontSize: 10, fontFamily: "JetBrains Mono" }} />
+              <XAxis type="number" tick={{ fill: "hsl(232 8% 45%)", fontSize: 10, fontFamily: "JetBrains Mono" }} />
+              <YAxis type="category" dataKey="name" width={100} tick={{ fill: "hsl(240 15% 7%)", fontSize: 10, fontFamily: "JetBrains Mono" }} />
               <Tooltip
-                contentStyle={{ background: "hsl(220 18% 10%)", border: "1px solid hsl(220 14% 16%)", borderRadius: "6px", color: "hsl(210 20% 92%)", fontSize: "12px", fontFamily: "JetBrains Mono" }}
+                contentStyle={{ background: "hsl(0 0% 100%)", border: "1px solid hsl(232 30% 90%)", borderRadius: "6px", color: "hsl(240 15% 7%)", fontSize: "12px", fontFamily: "JetBrains Mono" }}
                 formatter={(value: number) => [`$${value.toLocaleString()}`, ""]}
               />
-              <Bar dataKey="current" fill="hsl(0 85% 55%)" radius={[0, 4, 4, 0]} name="Current" />
-              <Bar dataKey="optimized" fill="hsl(145 70% 45%)" radius={[0, 4, 4, 0]} name="Optimized" />
+              <Bar dataKey="current" fill="hsl(347 80% 67%)" radius={[0, 4, 4, 0]} name="Current" />
+              <Bar dataKey="optimized" fill="hsl(220 83% 65%)" radius={[0, 4, 4, 0]} name="Optimized" />
             </BarChart>
           </ResponsiveContainer>
         </div>
