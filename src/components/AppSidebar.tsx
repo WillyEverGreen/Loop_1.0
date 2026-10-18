@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 import { LogoMark } from "./Logo";
 
 const navItems = [
-  { to: "/logs", icon: ScrollText, label: "System Logs" },
   { to: "/overview", icon: Home, label: "Overview" },
   { to: "/incidents", icon: AlertTriangle, label: "Incidents" },
   { to: "/services", icon: Server, label: "Services" },
@@ -22,6 +21,7 @@ const navItems = [
   { to: "/chaos", icon: FlaskConical, label: "Chaos" },
   { to: "/chatops", icon: MessageSquare, label: "ChatOps" },
   { to: "/audit", icon: Shield, label: "Audit Log" },
+  { to: "/logs", icon: ScrollText, label: "System Logs" },
 ];
 
 export default function AppSidebar() {

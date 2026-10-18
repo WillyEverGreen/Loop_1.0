@@ -1,7 +1,8 @@
 import DashboardLayout from "@/components/DashboardLayout";
 import PageHeader from "@/components/PageHeader";
+import StatusCard from "@/components/StatusCard";
 import { useSimulation } from "@/context/SimulationContext";
-import { Database } from "lucide-react";
+import { Database, CheckCircle, Hourglass, Gauge } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +11,13 @@ export default function DatabasePage() {
   return (
     <DashboardLayout>
       <PageHeader icon={Database} title="DB Optimizer" subtitle="AI-driven query analysis and index recommendations" kicker="Data" tone="accent" />
+
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+        <StatusCard title="Queries analysed" value={queries.length} icon={Database} variant="default" />
+        <StatusCard title="Indexes applied" value={queries.filter((q) => q.applied).length} icon={CheckCircle} variant="success" />
+        <StatusCard title="Pending review" value={queries.filter((q) => !q.applied).length} icon={Hourglass} variant="warning" />
+        <StatusCard title="Best speed-up" value={queries.map((q) => q.improvement).sort((a, b) => parseFloat(b) - parseFloat(a))[0] ?? "-"} icon={Gauge} variant="info" />
+      </div>
 
       <div className="space-y-3">
         {queries.map((q, i) => (

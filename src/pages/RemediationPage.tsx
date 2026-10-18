@@ -1,5 +1,7 @@
 import DashboardLayout from "@/components/DashboardLayout";
 import PageHeader from "@/components/PageHeader";
+import StatusCard from "@/components/StatusCard";
+import { Wrench, CheckCheck, Hourglass, Play } from "lucide-react";
 import { useSimulation } from "@/context/SimulationContext";
 import { Bot, CheckCircle, RotateCcw, ArrowUpCircle, RefreshCw, GitBranch } from "lucide-react";
 import { motion } from "framer-motion";
@@ -17,6 +19,13 @@ export default function RemediationPage() {
   return (
     <DashboardLayout>
       <PageHeader icon={Bot} title="Autonomous Remediation" subtitle="AI-driven auto-fix engine • 83% success rate • All actions reversible" kicker="Act" tone="primary" />
+
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+        <StatusCard title="Actions" value={remediations.length} icon={Wrench} variant="default" />
+        <StatusCard title="Completed" value={remediations.filter((r) => r.status === "completed").length} icon={CheckCheck} variant="success" />
+        <StatusCard title="Executing" value={remediations.filter((r) => r.status === "executing").length} icon={Play} variant="info" />
+        <StatusCard title="Ready to run" value={remediations.filter((r) => r.status === "ready").length} icon={Hourglass} variant="warning" />
+      </div>
 
       <div className="space-y-3">
         {remediations.map((r, i) => {

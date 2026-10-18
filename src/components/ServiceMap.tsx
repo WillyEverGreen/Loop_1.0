@@ -31,7 +31,7 @@ export default function ServiceMap({ services }: ServiceMapProps) {
           <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-destructive" /> Critical</span>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-2">
         {services.map((svc, i) => (
           <motion.div
             key={svc.id}
@@ -45,7 +45,7 @@ export default function ServiceMap({ services }: ServiceMapProps) {
           >
             <div className="flex items-center gap-1.5 mb-2">
               <span className={cn("h-2 w-2 rounded-full flex-shrink-0", statusColors[svc.status], svc.status === "critical" && "animate-pulse-glow")} />
-              <span className="text-xs font-mono font-medium text-foreground truncate">{svc.name}</span>
+              <span className="text-xs font-mono font-medium text-foreground truncate" title={svc.name}>{svc.name}</span>
             </div>
             <div className="space-y-1">
               <div className="flex justify-between text-[10px]">

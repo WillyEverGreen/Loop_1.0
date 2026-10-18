@@ -35,27 +35,27 @@ export default function DeploymentTracker() {
               initial={{ opacity: 0, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05 }}
-              className="flex items-center gap-3 p-2 rounded-md bg-secondary/30"
+              className="flex items-center gap-3 p-3 rounded-xl bg-secondary/60 transition-colors hover:bg-secondary"
             >
               <Icon className={cn("h-4 w-4 flex-shrink-0", statusText[dep.status], (dep.status === "rolling" || dep.status === "canary") && "animate-spin")} />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono font-medium text-foreground">{dep.service}</span>
-                  <span className="text-[10px] font-mono text-muted-foreground">{dep.version}</span>
+                  <span className="text-sm font-mono font-semibold text-foreground">{dep.service}</span>
+                  <span className="text-xs font-mono text-muted-foreground">{dep.version}</span>
                 </div>
                 <div className="flex items-center gap-2 mt-1">
-                  <div className="flex-1 h-1 rounded-full bg-secondary overflow-hidden">
+                  <div className="flex-1 h-1.5 rounded-full bg-border overflow-hidden">
                     <div
-                      className={cn("h-full rounded-full transition-all", dep.status === "rolled-back" ? "bg-destructive" : "bg-primary")}
+                      className={cn("h-full rounded-full transition-all", dep.status === "rolled-back" ? "bg-destructive" : dep.status === "completed" ? "bg-success" : dep.status === "canary" ? "bg-warning" : "bg-accent")}
                       style={{ width: `${dep.progress}%` }}
                     />
                   </div>
-                  <span className="text-[10px] font-mono text-muted-foreground">{dep.progress}%</span>
+                  <span className="text-xs font-mono text-muted-foreground">{dep.progress}%</span>
                 </div>
               </div>
               <div className="text-right">
-                <span className={cn("text-[10px] font-mono uppercase", statusText[dep.status])}>{dep.status}</span>
-                <p className="text-[10px] text-muted-foreground">Health: {dep.healthScore}%</p>
+                <span className={cn("text-xs font-mono uppercase", statusText[dep.status])}>{dep.status}</span>
+                <p className="text-xs text-muted-foreground">Health: {dep.healthScore}%</p>
               </div>
             </motion.div>
           );

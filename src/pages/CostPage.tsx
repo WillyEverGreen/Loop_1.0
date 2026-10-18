@@ -34,8 +34,8 @@ export default function CostPage() {
           <h3 className="text-sm font-semibold text-foreground mb-4">Cost Comparison by Service</h3>
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={chartData} layout="vertical">
-              <XAxis type="number" tick={{ fill: "hsl(232 8% 45%)", fontSize: 10, fontFamily: "JetBrains Mono" }} />
-              <YAxis type="category" dataKey="name" width={100} tick={{ fill: "hsl(240 15% 7%)", fontSize: 10, fontFamily: "JetBrains Mono" }} />
+              <XAxis type="number" tick={{ fill: "hsl(232 8% 45%)", fontSize: 11, fontFamily: "JetBrains Mono" }} />
+              <YAxis type="category" dataKey="name" width={130} tick={{ fill: "hsl(240 15% 7%)", fontSize: 11, fontFamily: "JetBrains Mono" }} />
               <Tooltip
                 contentStyle={{ background: "hsl(0 0% 100%)", border: "1px solid hsl(232 30% 90%)", borderRadius: "6px", color: "hsl(240 15% 7%)", fontSize: "12px", fontFamily: "JetBrains Mono" }}
                 formatter={(value: number) => [`$${value.toLocaleString()}`, ""]}

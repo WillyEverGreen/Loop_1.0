@@ -1,7 +1,8 @@
 import DashboardLayout from "@/components/DashboardLayout";
 import PageHeader from "@/components/PageHeader";
+import StatusCard from "@/components/StatusCard";
 import { useSimulation } from "@/context/SimulationContext";
-import { FlaskConical, CheckCircle, Loader2, Clock } from "lucide-react";
+import { FlaskConical, CheckCircle, Loader2, Clock, Gauge } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -12,6 +13,13 @@ export default function ChaosPage() {
   return (
     <DashboardLayout>
       <PageHeader icon={FlaskConical} title="Chaos Engineering" subtitle="Continuous resilience testing • Automated failure injection" kicker="Resilience" tone="warning" />
+
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+        <StatusCard title="Experiments" value={chaosExperiments.length} icon={FlaskConical} variant="default" />
+        <StatusCard title="Running" value={chaosExperiments.filter((e) => e.status === "running").length} icon={Loader2} variant="info" />
+        <StatusCard title="Completed" value={chaosExperiments.filter((e) => e.status === "completed").length} icon={CheckCircle} variant="success" />
+        <StatusCard title="Avg resilience" value={`${Math.round(chaosExperiments.filter((e) => e.resilience > 0).reduce((a, e) => a + e.resilience, 0) / Math.max(1, chaosExperiments.filter((e) => e.resilience > 0).length))}%`} icon={Gauge} variant="warning" />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {chaosExperiments.map((exp, i) => {
